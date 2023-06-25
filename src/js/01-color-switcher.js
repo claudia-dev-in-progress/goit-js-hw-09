@@ -10,6 +10,9 @@ const stopButton = document.querySelector("[data-stop]");
 let timerId = null;
 
 startButton.addEventListener("click", () => {
+  if (timerId !== null) {
+    return;
+  }
   timerId = setInterval(setBodyBackground, 1000);
 });
 
